@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://lg6n7hxkmhop"]
+
+[ext_resource type="Theme" uid="uid://lfarqy6hujgn" path="res://Ressources/theme.tres" id="1_gp16t"]
+[ext_resource type="Script" path="res://Scripts/options.gd" id="2_8ljxw"]
+[ext_resource type="PackedScene" uid="uid://b81cqqvxpu18o" path="res://Scenes/UI/langSelector.tscn" id="2_236lr"]
+[ext_resource type="PackedScene" uid="uid://cl5k2837411s4" path="res://Scenes/UI/credits.tscn" id="4_7j5tr"]
+
+[node name="Options" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_gp16t")
+script = ExtResource("2_8ljxw")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.1
+anchor_right = 0.75
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"RoundedPanel"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="LangSelector" parent="Panel/VBoxContainer" instance=ExtResource("2_236lr")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Retry" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "RETRY"
+
+[node name="Credits" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Credits"
+
+[node name="Exit" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "QUIT"
+
+[node name="Credits" parent="." instance=ExtResource("4_7j5tr")]
+visible = false
+layout_mode = 1
+grow_horizontal = 1
+grow_vertical = 1
+
+[connection signal="pressed" from="Panel/VBoxContainer/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="meta_clicked" from="Credits/RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]
+
+[editable path="Credits"]

@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://21ckriqf7yat"]
+
+[ext_resource type="Texture2D" uid="uid://b36tc8toto8xr" path="res://Assets/verifier.png" id="1_rprk0"]
+[ext_resource type="Theme" uid="uid://lfarqy6hujgn" path="res://Ressources/theme.tres" id="1_tvu8d"]
+[ext_resource type="Script" path="res://Scripts/choice_block.gd" id="2_0av5p"]
+[ext_resource type="Texture2D" uid="uid://wyg1swy3h2c0" path="res://Assets/traverser.png" id="2_1y0sv"]
+
+[node name="ChoiceBlock" type="HBoxContainer"]
+anchors_preset = -1
+anchor_right = 0.546
+anchor_bottom = 0.476
+offset_right = -0.320068
+offset_bottom = -0.0800171
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_tvu8d")
+theme_override_constants/separation = 20
+alignment = 1
+script = ExtResource("2_0av5p")
+
+[node name="Validate" type="Button" parent="."]
+modulate = Color(0, 1, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("1_rprk0")
+icon_alignment = 1
+
+[node name="Cancel" type="Button" parent="."]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("2_1y0sv")
+
+[connection signal="pressed" from="Validate" to="." method="_on_validate_pressed"]
+[connection signal="pressed" from="Cancel" to="." method="_on_cancel_pressed"]

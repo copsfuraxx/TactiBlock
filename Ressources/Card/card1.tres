@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://qitmg6aa5tfw"]
+
+[ext_resource type="PackedScene" uid="uid://bno0glgc5msic" path="res://Scenes/Block/block_1.tscn" id="1_6okrg"]
+[ext_resource type="Script" path="res://Scripts/cardData.gd" id="1_t8afy"]
+
+[resource]
+script = ExtResource("1_t8afy")
+name_key = "BLOCK_1_TITLE"
+cost = 1
+description_key = "BLOCK_1_DESC"
+blockPrefab = ExtResource("1_6okrg")

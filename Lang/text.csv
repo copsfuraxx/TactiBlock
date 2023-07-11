@@ -1,0 +1,9 @@
+key,fr,en
+TURN,Tour : %d,Turn : %d
+LANG,Langue,Language
+QUIT,Quitter la partie,Quit game
+BLOCK_1_TITLE,Bloque basique, Normal block
+BLOCK_1_DESC,Aucune,None
+VALIDATE,Valider,Validate
+END_TURN,Fin du tour,End turn
+RETRY,Recommencer,Retry

@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://dc2fgkjloy5nq"]
+
+[ext_resource type="Texture2D" uid="uid://dgd0h7jwfgupo" path="res://Assets/Ghost/ghost-Sheet.png" id="1_rumd5"]
+[ext_resource type="Script" path="res://Scripts/ghost.gd" id="2_yery0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5fxf"]
+atlas = ExtResource("1_rumd5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jabk"]
+atlas = ExtResource("1_rumd5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqcir"]
+atlas = ExtResource("1_rumd5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjjs4"]
+atlas = ExtResource("1_rumd5")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y2goh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5fxf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jabk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqcir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjjs4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kq4e"]
+size = Vector2(30, 27)
+
+[node name="Ghost" type="AnimatedSprite2D" groups=["Monster"]]
+sprite_frames = SubResource("SpriteFrames_y2goh")
+autoplay = "default"
+script = ExtResource("2_yery0")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_4kq4e")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

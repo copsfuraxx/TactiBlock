@@ -1,0 +1,50 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://lfarqy6hujgn"]
+
+[ext_resource type="FontFile" uid="uid://dfapc5kbfqnsx" path="res://Assets/doctor_glitch/Doctor Glitch.otf" id="1_ssu56"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_the0t"]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opnkx"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m5ked"]
+bg_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[resource]
+resource_name = "RoundedPanel"
+default_font = ExtResource("1_ssu56")
+Button/styles/focus = SubResource("StyleBoxFlat_the0t")
+Button/styles/normal = SubResource("StyleBoxFlat_opnkx")
+OptionButton/constants/arrow_margin = 0
+RoundedPanel/styles/panel = SubResource("StyleBoxFlat_m5ked")
+VBoxContainer/constants/separation = 20

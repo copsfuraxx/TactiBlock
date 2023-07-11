@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cl5k2837411s4"]
+
+[node name="Credits" type="Panel"]
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.1
+anchor_right = 0.75
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"RoundedPanel"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]
+Character :
+[url=https://zegley.itch.io/2d-platformermetroidvania-asset-pack]FREE-2D Pixel Art Character Asset Pack[/url] by [url=https://itch.io/profile/zegley]ZeggyGames[/url]
+
+Background :
+[url=https://edermunizz.itch.io/free-pixel-art-hill]Free Pixel Art Hill[/url] by [url=https://itch.io/profile/edermunizz]edermunizz[/url]
+
+Font:
+[url=https://www.dafont.com/fr/doctor-glitch.font]Doctor Glitch[/url]  by [url=https://www.dafont.com/fr/woodcutter-manero.d3980]Woodcutter[/url]
+
+Mushroom monster :
+[url=https://luizmelo.itch.io/monsters-creatures-fantasy]Monsters Creatures Fantasy[/url]  by [url=https://itch.io/profile/luizmelo]LuizMelo[/url]
+
+Ghost monster :
+[url=https://master-blazter.itch.io/ghostspritepack]Ghost Sprite Pack[/url]  by [url=https://itch.io/profile/master-blazter]Master Blazter[/url]
+
+Icon :
+[url=https://www.flaticon.com/fr/icones-gratuites/oui]Yes icon[/url] by Amazona Adorada
+[url=https://www.flaticon.com/fr/icones-gratuites/bouton-de-fermeture]Close icon[/url] by bsd
+
+[url=https://ankousse26.itch.io/free-flag-with-animation]free flag with animation[/url] by [url=https://itch.io/profile/master-blazter]Master Blazter[/url] 
+
+[center]"
+meta_underlined = false

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bno0glgc5msic"]
+
+[ext_resource type="Script" path="res://Scripts/block.gd" id="1_1l3i0"]
+[ext_resource type="PackedScene" uid="uid://21ckriqf7yat" path="res://Scenes/UI/choice_block.tscn" id="2_gg6dm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6hrb7"]
+size = Vector2(500, 100)
+
+[node name="Block1" type="StaticBody2D"]
+collision_mask = 6
+script = ExtResource("1_1l3i0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(250, 50)
+shape = SubResource("RectangleShape2D_6hrb7")
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, 0, 100, 500, 100, 500, 0)
+
+[node name="ChoiceBlock" parent="." instance=ExtResource("2_gg6dm")]
+offset_left = 172.0
+offset_top = -108.0
+offset_right = 1220.0
+offset_bottom = 406.0
+scale = Vector2(0.15, 0.15)
